@@ -1,0 +1,36 @@
+.top-bar
+{
+    background-color: #b7eddd;
+}
+
+.recipe-list
+{
+    background-color: #80b5bf;
+    width: 25%;
+}
+
+.recipe-detail
+{
+    background-color: #a3d9b5;
+    flex-grow: 5;
+
+}
+
+.flex-container
+{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.comments-container
+{
+    display:flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.comments-section
+{
+    background-color: white;
+    border-color: black;
+}
