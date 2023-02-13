@@ -10,7 +10,7 @@
 .recipe-list
 {
     background-color: #80b5bf;
-    width: 25%;
+    width: 300px;
 }
 
 .recipe-detail
@@ -24,6 +24,7 @@
 {
     display: flex;
     justify-content: flex-start;
+    width: auto;
 }
 
 .comments-container
@@ -37,4 +38,10 @@
 {
     background-color: white;
     border-color: black;
+}
+
+#recipe-image
+{
+    width: 300px;
+    height: 300px;
 }

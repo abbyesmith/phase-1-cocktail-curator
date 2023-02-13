@@ -18,7 +18,8 @@
             "2. Make the margarita mix. Add tequila, orange liqueur, lime juice and a few ice cubes to a cocktail shaker. Cover and shake vigorously for about 10 seconds. Give the mix a taste and stir in a teaspoon or two of sweetener if desired. ",
             "3. Serve. Fill the prepared serving glass with ice. Strain in the margarita mix, garnish with a lime slice, serve and enjoy. Cheers!"
         ],
-        "source" : "https://www.gimmesomeoven.com/margarita-recipe/"
+        "source" : "https://www.gimmesomeoven.com/margarita-recipe/",
+        "comments" : ["Test 1", "Test 2"]
     },
     {
         "id" : 2,
@@ -37,7 +38,9 @@
             "3. Strain into a rocks glass over one large ice cube.",
             "4. Express the oil of an orange twist over the glass, then drop into the glass to garnish."
         ],
-        "source" : "https://www.liquor.com/recipes/bourbon-old-fashioned/"
+        "source" : "https://www.liquor.com/recipes/bourbon-old-fashioned/",
+        "comments" : ["Test 1", "Test 2"]
+
     },
     {
         "id" : 3,
@@ -55,7 +58,9 @@
             "3. To make the cocktail, fill a cocktail shaker with ice. Pour in the honey syrup, lemon juice and gin. Securely fasten the lid and shake until the mixture is very cold, about 30 seconds.",
             "4. Strain the drink into a coupe or martini glass. Twist the lemon peel over the cocktail to release some of its oils, then drop it in. Enjoy while cold."
         ],
-        "source" : "https://cookieandkate.com/bees-knees-cocktail-recipe/"
+        "source" : "https://cookieandkate.com/bees-knees-cocktail-recipe/",
+        "comments" : ["Test 1", "Test 2"]
+
     },
     {
         "id" : 4,
@@ -74,7 +79,9 @@
             "1. Lightly muddle the mint in the bottom of a cocktail shaker until aromatic. Add the rum, lime juice, simple syrup, a handful of ice and shake.",
             "2. Strain into a glass filled with ice. Top with a splash of club soda and garnish with lime slices and more mint."
         ],
-        "source" : "https://www.loveandlemons.com/mojito-recipe/"
+        "source" : "https://www.loveandlemons.com/mojito-recipe/",
+        "comments" : ["Test 1", "Test 2"]
+
     },
     {
         
@@ -88,7 +95,9 @@
         "directions" : [
             "1. Pour the sparkling wine into the Champagne flutes, filling each glass about half full. Pour the orange juice on top to fill each glass and serve."
         ],
-        "source" : "https://www.loveandlemons.com/mimosa-recipe/#wprm-recipe-container-42453"
+        "source" : "https://www.loveandlemons.com/mimosa-recipe/#wprm-recipe-container-42453",
+        "comments" : ["Test 1", "Test 2"]
+
     }
 ]
 }

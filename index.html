@@ -8,26 +8,28 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="index.js"></script>
     <div class="top-bar">
         <h2>Cocktail Curator</h2>
     </div>
     <div class="flex-container">
         <div class="recipe-list">
             <ul>
-                <li>Placeholder for recipe</li>
             </ul>
         </div>
         <div class="recipe-detail">
             <!-- EVERYTHING INSIDE THIS DIV WILL BE GENERATED WHEN GET REQUEST IS DONE -->
-            <h4>Recipe Name</h4>
+            <h4 id = "title">TITLE</h4>
             <ul>
-                <li>Placeholder for ingredients</li>
+                <li id="recipe-ingredients">Placeholder for ingredients</li>
             </ul>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7tplQy4KxT_pd9Ay7kXErYawTXpVVUzujUrFv28sP3A&s">
-            <p>Placeholder for directions</p>
+            <img id="recipe-image" src="" />
+            <p id="recipe-instructions">Placeholder for directions</p>
+            <a id="recipe-source" href="">LINK</a>
+            <!-- <p id="recipe-source">LINK</p> -->
             <div class="comments-container">
                 <div class="comments-section">
-                    <p>Generate comments here</p>
+                    <ul id="comment-list"></ul>
                 </div>
                 <form>
                     <input type="text" placeholder="Comment">
