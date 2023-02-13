@@ -1,29 +1,35 @@
 body {
-    background-color:  #296d98;
+background-color:  #296d98;
+ 
 }
-
-
-.top-bar
+.header 
 {
     background-color: #296d98;
     text-align: center;
     height: 100px;
     align-items: center;
     font-size: 39px;
+    font-family: rockwell;
 }
 
-.recipe-list
+
+
+* .recipe-list
 {
     background-color: #e89c4a;
     width: 25%;
+    font-family: rockwell;
+    border-style: solid
     
-}
+    
+} 
 
 .recipe-detail
 {
     background-color: #e89c4a;
     flex-grow: 5;
-
+    font-family: rockwell;
+    border-style: solid
 }
 
 .flex-container
@@ -39,6 +45,7 @@ body {
     flex-wrap: wrap;
     width: 50%;
     background-color: #e89c4a
+   
 }
 
 .comments-section
@@ -46,9 +53,12 @@ body {
     background-color: white;
     border-color: black;
     background-color: #e89c4a
+    
 }
 
 #smiley {
     width: 150px;
     height: 150px;
 }
+
+    
