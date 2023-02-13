@@ -1,17 +1,25 @@
+body {
+    background-color:  #296d98;
+}
 .top-bar
 {
-    background-color: #b7eddd;
+    background-color: #296d98;
+    text-align: center;
+    height: 100px;
+    align-items: center;
+    font-size: 39px;
 }
 
 .recipe-list
 {
-    background-color: #80b5bf;
+    background-color: #e89c4a;
     width: 25%;
+    
 }
 
 .recipe-detail
 {
-    background-color: #a3d9b5;
+    background-color: #e89c4a;
     flex-grow: 5;
 
 }
@@ -24,13 +32,21 @@
 
 .comments-container
 {
-    display:flex;
+    display:flex; 
+    flex-direction: column;
     flex-wrap: wrap;
     width: 50%;
+    background-color: #e89c4a
 }
 
 .comments-section
 {
     background-color: white;
     border-color: black;
+    background-color: #e89c4a
+}
+
+#smiley {
+    width: 150px;
+    height: 150px;
 }
