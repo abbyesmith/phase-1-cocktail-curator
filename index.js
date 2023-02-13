@@ -38,7 +38,7 @@ fetch ("http://localhost:3000/menu")
  })
  function displayNameInNav(recipe){
     //console.log(“HI”);
-    let recipeList = document.querySelector('.recipe-list");
+    let recipeList = document.querySelector(".recipe-list");
     let recipeTitle = document.createElement('li');
     recipeTitle.textContent=recipe.name;
     recipeList.appendChild(recipeTitle);
@@ -51,11 +51,11 @@ fetch ("http://localhost:3000/menu")
 function showRecipeCard(recipe){
     //console.log(‘test’)
     currentRecipe=recipe;
-    let recipeName = document.querySelector(“#title”);
-    let recipeImage = document.querySelector(“#recipe-image”);
-    let recipeIngredients = document.querySelector(“#recipe-ingredients”);
-    let recipeInstructions = document.querySelector(“#recipe-instructions”);
-    let recipeSource = document.querySelector(“#recipe-source”);
+    let recipeName = document.querySelector("#title”);
+    let recipeImage = document.querySelector("#recipe-image”);
+    let recipeIngredients = document.querySelector("#recipe-ingredients”);
+    let recipeInstructions = document.querySelector("#recipe-instructions”);
+    let recipeSource = document.querySelector("#recipe-source”);
     displayComments(recipe.comments);
     recipeName.textContent=recipe.name;
     recipeImage.src=recipe.image;
@@ -76,7 +76,7 @@ function addComment(comment){
     //console.log(comment)
     let commentSection = document.querySelector(“#comment-list”);
     console.log(commentSection);
-    let note = document.createElement(“li”);
+    let note = document.createElement("li”);
     note.textContent = comment;
     // console.log(commentSection);
     commentSection.append(note);
