@@ -91,6 +91,3 @@ function handleSubmitNewComment(event) {
 
 
 
-
-
-
