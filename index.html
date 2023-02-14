@@ -11,11 +11,18 @@
     <script defer src="index.js"></script>
     <div class="top-bar">
         <h2>Cocktail Curator</h2>
+        <div id="container" style="display: none">
+            <input type="text" placeholder="name">
+            <input type="text" placeholder="ingredients">
+            <input type="directions" placeholder="directions">
+            <input type="submit">
+        </div>
     </div>
     <div class="flex-container">
         <div class="recipe-list">
             <ul>
             </ul>
+            <button id="new-recipe-button">ADD NEW RECIPE</button>
         </div>
         <div class= "recipe-detail">
             <!-- EVERYTHING INSIDE THIS DIV WILL BE GENERATED WHEN GET REQUEST IS DONE -->

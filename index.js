@@ -1,6 +1,8 @@
 //Global Variables
 let recipeData;
 let currentRecipe;
+let addRecipe=false;
+
 //fetch
 fetch ("http://localhost:3000/menu")
  .then(response => response.json())
@@ -47,7 +49,6 @@ function showRecipeCard(recipe){
     recipeName.textContent=recipe.name;
     recipeImage.src=recipe.image;
     recipe.ingredients.forEach(thing=>{
-        console.log(thing);
         let t = document.createElement("li");
         t.textContent=thing;
         recipeIngredients.append(t)
@@ -109,6 +110,47 @@ function handleSubmitNewComment(event) {
 }
 let commentForm = document.querySelector("#comment-form");
 commentForm.addEventListener('submit', (event)=> handleSubmitNewComment(event))
+
+
+
+////////////////////////////////////////
+// Adds click to add new recipe button
+///////////////////////////////////////
+
+document.querySelector("#new-recipe-button").addEventListener('click',()=>
+{
+    console.log(addRecipe);
+    addRecipe=!addRecipe;
+    if (addRecipe)
+    {
+        document.querySelector('#container').style.display='block';
+        document.querySelector('#container').addEventListener('submit',(e)=>
+        {
+            e.preventDefault();
+            console.log(e.target);
+            //addNewRecipe(e.target);
+        })
+    }
+    else 
+    {
+        document.querySelector('#container').style.display='none';
+    }
+})
+
+// function addNewRecipe()
+// {
+//     let name=prompt(`What's the name of your recipe?`);
+//     let num=prompt('How many ingredients do you have?');
+//     let ingArray=[];
+
+//     for (let i=0; i<num; i++)
+//     {
+//         ingArray.push(prompt(`Name ingredient number ${i+1}.`))
+//     }
+//     console.log(ingArray)
+// }
+
+
 
 
 
