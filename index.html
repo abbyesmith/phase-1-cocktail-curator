@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
     <div class="top-bar">
         <h2>Cocktail Curator</h2>
     </div>
@@ -24,14 +24,13 @@
                 <li id="recipe-ingredients">Placeholder for ingredients</li>
             </ul>
             <img id="recipe-image" src="" />
-            <p id="recipe-instructions">Placeholder for directions</p>
+            <li id="recipe-instructions">Placeholder for directions</li>
             <a id="recipe-source" href="">LINK</a>
-            <!-- <p id="recipe-source">LINK</p> -->
             <div class="comments-container">
                 <div class="comments-section">
                     <ul id="comment-list"></ul>
                 </div>
-                <form>
+                <form id="comment-form">
                     <input type="text" placeholder="Comment">
                     <input type="submit">
                 </form>

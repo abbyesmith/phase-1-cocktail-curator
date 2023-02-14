@@ -32,8 +32,11 @@ fetch('http://localhost:3000/menu')
     recipeData=json;
     recipeData.forEach(recipe=>{
         displayNameInNav(recipe);
+        //showRecipeCard(recipe);
     })
     showRecipeCard(recipeData[0]);
+   //displayComments(recipe);
+
  })
 
  function displayNameInNav(recipe){
@@ -43,55 +46,85 @@ fetch('http://localhost:3000/menu')
     recipeTitle.textContent=recipe.name;
     recipeList.appendChild(recipeTitle);
     recipeTitle.addEventListener("click", () => {
-        console.log("Hey")
+        document.querySelector('#comment-list').textContent='';
         showRecipeCard(recipe);
-        //displayComments(recipe);
     })
  }
-
+// function clearPage(){
+//     let content = document.querySelector("#comment-list");
+//     content.innerHTML = "";
+//       }
 function showRecipeCard(recipe){
-    //console.log('test')
+
     currentRecipe=recipe;
+    //recipe.forEach(comment=>
     let recipeName = document.querySelector("#title");
     let recipeImage = document.querySelector("#recipe-image");
     let recipeIngredients = document.querySelector("#recipe-ingredients");
     let recipeInstructions = document.querySelector("#recipe-instructions");
     let recipeSource = document.querySelector("#recipe-source");
-    displayComments(recipe.comments);
+    let recipeComments = document.querySelector("#comment-print");
+    let commentlist = document.querySelector("#comment-list");
+    //querySelector("#comment-list").remove();
 
     recipeName.textContent=recipe.name;
     recipeImage.src=recipe.image;
     recipeIngredients.textContent=recipe.ingredients;
     recipeInstructions.textContent=recipe.directions;
     recipeSource.href=recipe.source;
+    //console.log(recipe.comments);
+    recipe.comments.forEach(comment=>{
+        let c = document.createElement("li");
+        c.textContent=comment;
+        //Adding multiple rows
+        commentlist.append(c)
+    });
+    
+    //displayComments(recipe.comments);
 
 }
+//1. def var 
 
-const test = document.querySelector("#title");
-console.log(test);
+//const test = document.querySelector("#title");
+//console.log(test);
 
 //function to display comments 
-let commentSection = document.querySelector("#recipe-image");
-console.log(commentSection);
+//let commentSection = document.querySelector("#recipe-image");
+//console.log(commentSection);
 
-function displayComments(comments){
-    //console.log(comments),
-    comments.forEach(comment => addComment(comment))
-}
+// function displayComments(comments){
+//     //console.log(comments),
+//     comments.forEach(comment => addComment(comment))
+//     //addComment(comments);
+
+// }
+
 
 function addComment(comment){
-    //console.log(comment)
     let commentSection = document.querySelector("#comment-list");
-    console.log(commentSection);
-    let note = document.createElement("li");
+    //commentSection.innerHTML = "";
+  
+    //console.log(commentSection);
+   let note = document.createElement("li");
     note.textContent = comment;
     // console.log(commentSection);
     commentSection.append(note);
+    
 }
 
 function handleSubmitNewComment(event) {
-    event.preventDefault()
-    const newComment = event.target[0].value
-    addComment(newComment)
-    event.target.reset()
+    event.preventDefault();
+    const newComment = event.target[0].value;
+    addComment(newComment);
+    // event.target.reset()
+}
+let commentForm = document.querySelector("#comment-form");
+commentForm.addEventListener('submit', (event)=> handleSubmitNewComment(event))
+
+function newComment(){
+    let commentForm = document.querySelector("#comment-form");
+    commentForm.addEventListener('submit', (event) => {
+        event.preventDefault()
+        currentRecipe.comments.push(event.target.value)
+    })
 }
