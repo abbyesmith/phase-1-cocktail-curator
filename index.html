@@ -8,38 +8,39 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="index.js"></script>
-    <div class="header">
-        <h1>Cocktail Curator</h1>
+    <script defer src="index.js"></script>
+    <div class="top-bar">
+        <h2>Cocktail Curator</h2>
     </div>
     <div class="flex-container">
         <div class="recipe-list">
-            <ul id="recipes">
-                <li> Placeholder For Directions </li>
+            <ul>
             </ul>
         </div>
-        <div class= "recipe-list">
+        <div class= "recipe-detail">
             <!-- EVERYTHING INSIDE THIS DIV WILL BE GENERATED WHEN GET REQUEST IS DONE -->
-            <h4>Recipe Name</h4>
-            <ul>
-                <li>Placeholder for ingredients</li>
+            <h4 id = "title">TITLE</h4>
+            <ul id = "recipe-ingredients">
+                <!-- <li id="recipe-ingredients">Placeholder for ingredients</li> -->
             </ul>
-            <img id="smiley" src="https://static-00.iconduck.com/assets.00/cocktail-glass-emoji-417x512-qoz2h4b6.png">
-            
+            <img id="recipe-image" src="" />
+            <div>
+                <span id = "likes-section"></span>
+                <button id = "likes-button">🥂</button>
+            </div>
+            <ul id="recipe-instructions"></ul>
+            <a id="recipe-source" href="">  </a>
             <div class="comments-container">
                 <div class="comments-section">
-                    <p>Generate comments here</p>
+                    <ul id="comment-list"></ul>
                 </div>
-                <form>
+                <form id="comment-form">
                     <input type="text" placeholder="Comment">
                     <input type="submit">
                 </form>
             </div>
             <!-- EVERYTHING INSIDE THIS DIV WILL BE GENERATED WHEN GET REQUEST IS DONE -->
-            <div class="recipe-list">
-                <ul>
-                </ul>
-            </div>
+
         </div>
     </div>
 </body>

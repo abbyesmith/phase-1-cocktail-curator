@@ -19,8 +19,8 @@ background-color:  #296d98;
     background-color: #e89c4a;
     width: 25%;
     font-family: rockwell;
-    border-style: solid
-    
+    border-style: solid;
+    padding: 10px;
     
 } 
 
@@ -29,13 +29,16 @@ background-color:  #296d98;
     background-color: #e89c4a;
     flex-grow: 5;
     font-family: rockwell;
-    border-style: solid
+    border-style: solid;
+    padding: 10px;
 }
 
 .flex-container
 {
+    padding: 10px;
     display: flex;
     justify-content: flex-start;
+    width: 100%;
 }
 
 .comments-container
@@ -56,7 +59,7 @@ background-color:  #296d98;
     
 }
 
-#smiley {
+#recipe-image {
     width: 150px;
     height: 150px;
 }

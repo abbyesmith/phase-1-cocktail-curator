@@ -1,94 +1,119 @@
 {
-"menu" : [
+  "menu": [
     {
-        "id" : 1,
-        "name" : "Margarita",
-        "image" : "https://www.gimmesomeoven.com/wp-content/uploads/2015/05/Classic-Margarita-Recipe-5.jpg",
-        "ingredients" : [
-            "1.5 oz silver tequila", 
-            "1 oz orange liqueur", 
-            ".75 oz freshly-squeezed lime juice",
-            "Optional: .75 oz simple syrup or agave nectar",
-            "1 cup ice",
-            "lime wedge",
-            "coarse salt for rimming glass"
-        ],
-        "directions" : [
-            "1. Salt the rim of the glass (optional). Run a lime wedge around the top rim of the serving glass. Fill a shallow bowl or plate with salt, then dip the rim until it is covered with your desired amount of salt. Set aside.",
-            "2. Make the margarita mix. Add tequila, orange liqueur, lime juice and a few ice cubes to a cocktail shaker. Cover and shake vigorously for about 10 seconds. Give the mix a taste and stir in a teaspoon or two of sweetener if desired. ",
-            "3. Serve. Fill the prepared serving glass with ice. Strain in the margarita mix, garnish with a lime slice, serve and enjoy. Cheers!"
-        ],
-        "source" : "https://www.gimmesomeoven.com/margarita-recipe/"
+      "id": 1,
+      "name": "Margarita",
+      "image": "https://www.gimmesomeoven.com/wp-content/uploads/2015/05/Classic-Margarita-Recipe-5.jpg",
+      "ingredients": [
+        "1.5 oz silver tequila",
+        "1 oz orange liqueur",
+        ".75 oz freshly-squeezed lime juice",
+        "Optional: .75 oz simple syrup or agave nectar",
+        "1 cup ice",
+        "lime wedge",
+        "coarse salt for rimming glass"
+      ],
+      "directions": [
+        "1. Salt the rim of the glass (optional). Run a lime wedge around the top rim of the serving glass. Fill a shallow bowl or plate with salt, then dip the rim until it is covered with your desired amount of salt. Set aside.",
+        "2. Make the margarita mix. Add tequila, orange liqueur, lime juice and a few ice cubes to a cocktail shaker. Cover and shake vigorously for about 10 seconds. Give the mix a taste and stir in a teaspoon or two of sweetener if desired. ",
+        "3. Serve. Fill the prepared serving glass with ice. Strain in the margarita mix, garnish with a lime slice, serve and enjoy. Cheers!"
+      ],
+      "source": "https://www.gimmesomeoven.com/margarita-recipe/",
+      "likes": 6,
+      "comments": [
+        "LET'S GOOOOOOO!",
+        "Margaritas for days",
+        "My go to morning beverage"
+      ]
     },
     {
-        "id" : 2,
-        "name" : "Old Fashioned",
-        "image" : "https://www.liquor.com/thmb/wm9ICT4sskWaeUONYmoCqiTEjLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__05__08113350__bourbon-old-fashioned-720x720-recipe-ade6f7780c304999be3577e565c9bcdd.jpg",
-        "ingredients" : [
-            "1 tsp sugar",
-            "3 dashes Angostura bitters",
-            "1 tsp water",
-            "2 oz bourbon",
-            "Orange twist"
-        ],
-        "directions" : [
-            "1. Add the sugar and bitters into a mixing glass, then add the water, and stir until the sugar is nearly dissolved.",
-            "2. Fill the mixing glass with ice, add the bourbon, and stir until well-chilled.",
-            "3. Strain into a rocks glass over one large ice cube.",
-            "4. Express the oil of an orange twist over the glass, then drop into the glass to garnish."
-        ],
-        "source" : "https://www.liquor.com/recipes/bourbon-old-fashioned/"
+      "id": 2,
+      "name": "Old Fashioned",
+      "image": "https://www.liquor.com/thmb/wm9ICT4sskWaeUONYmoCqiTEjLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__05__08113350__bourbon-old-fashioned-720x720-recipe-ade6f7780c304999be3577e565c9bcdd.jpg",
+      "ingredients": [
+        "1 tsp sugar",
+        "3 dashes Angostura bitters",
+        "1 tsp water",
+        "2 oz bourbon",
+        "Orange twist"
+      ],
+      "directions": [
+        "1. Add the sugar and bitters into a mixing glass, then add the water, and stir until the sugar is nearly dissolved.",
+        "2. Fill the mixing glass with ice, add the bourbon, and stir until well-chilled.",
+        "3. Strain into a rocks glass over one large ice cube.",
+        "4. Express the oil of an orange twist over the glass, then drop into the glass to garnish."
+      ],
+      "source": "https://www.liquor.com/recipes/bourbon-old-fashioned/",
+      "likes": 0,
+      "comments": [
+        "Test 1",
+        "Test 2"
+      ]
     },
     {
-        "id" : 3,
-        "name" : "Bee's Knees",
-        "image" : "https://cookieandkate.com/images/2020/04/bees-knees-cocktail.jpg",
-        "ingredients" : [
-            "0.5 oz honey syrup",
-            "1 oz lemon juice",
-            "2 oz gin",
-            "Lemon twist"
-        ],
-        "directions" : [
-            "1. To make the honey syrup: Combine equal parts honey and water (say, 2 tablespoons each if you are only making a few cocktails) in a microwave-safe bowl or small saucepan. Warm in the microwave or over the stovetop just until you can completely stir the honey into the water. Set aside.",
-            "2. Before juicing your lemons, use a vegetable peeler to peel off a strip(s) of zest for your twist.",
-            "3. To make the cocktail, fill a cocktail shaker with ice. Pour in the honey syrup, lemon juice and gin. Securely fasten the lid and shake until the mixture is very cold, about 30 seconds.",
-            "4. Strain the drink into a coupe or martini glass. Twist the lemon peel over the cocktail to release some of its oils, then drop it in. Enjoy while cold."
-        ],
-        "source" : "https://cookieandkate.com/bees-knees-cocktail-recipe/"
+      "id": 3,
+      "name": "Bee's Knees",
+      "image": "https://cookieandkate.com/images/2020/04/bees-knees-cocktail.jpg",
+      "ingredients": [
+        "0.5 oz honey syrup",
+        "1 oz lemon juice",
+        "2 oz gin",
+        "Lemon twist"
+      ],
+      "directions": [
+        "1. To make the honey syrup: Combine equal parts honey and water (say, 2 tablespoons each if you are only making a few cocktails) in a microwave-safe bowl or small saucepan. Warm in the microwave or over the stovetop just until you can completely stir the honey into the water. Set aside.",
+        "2. Before juicing your lemons, use a vegetable peeler to peel off a strip(s) of zest for your twist.",
+        "3. To make the cocktail, fill a cocktail shaker with ice. Pour in the honey syrup, lemon juice and gin. Securely fasten the lid and shake until the mixture is very cold, about 30 seconds.",
+        "4. Strain the drink into a coupe or martini glass. Twist the lemon peel over the cocktail to release some of its oils, then drop it in. Enjoy while cold."
+      ],
+      "source": "https://cookieandkate.com/bees-knees-cocktail-recipe/",
+      "likes": 0,
+      "comments": [
+        "Test 1",
+        "Test 2"
+      ]
     },
     {
-        "id" : 4,
-        "name" : "Mojito",
-        "image" : "https://cdn.loveandlemons.com/wp-content/uploads/2020/07/mojito-recipe.jpg",
-        "ingredients" : [
-            "5 mint leaves, more for garnish",
-            "2 oz white rum",
-            "1 oz fresh lime juice",
-            "0.5 oz simple syrup",
-            "Ice",
-            "Club soda or sparkling water",
-            "Lime slices for garnish"
-        ],
-        "directions" : [
-            "1. Lightly muddle the mint in the bottom of a cocktail shaker until aromatic. Add the rum, lime juice, simple syrup, a handful of ice and shake.",
-            "2. Strain into a glass filled with ice. Top with a splash of club soda and garnish with lime slices and more mint."
-        ],
-        "source" : "https://www.loveandlemons.com/mojito-recipe/"
+      "id": 4,
+      "name": "Mojito",
+      "image": "https://cdn.loveandlemons.com/wp-content/uploads/2020/07/mojito-recipe.jpg",
+      "ingredients": [
+        "5 mint leaves, more for garnish",
+        "2 oz white rum",
+        "1 oz fresh lime juice",
+        "0.5 oz simple syrup",
+        "Ice",
+        "Club soda or sparkling water",
+        "Lime slices for garnish"
+      ],
+      "directions": [
+        "1. Lightly muddle the mint in the bottom of a cocktail shaker until aromatic. Add the rum, lime juice, simple syrup, a handful of ice and shake.",
+        "2. Strain into a glass filled with ice. Top with a splash of club soda and garnish with lime slices and more mint."
+      ],
+      "source": "https://www.loveandlemons.com/mojito-recipe/",
+      "likes": 0,
+      "comments": [
+        "Test 1",
+        "Test 2"
+      ]
     },
     {
-        
-        "id" : 5,
-        "name" : "Mimosa",
-        "image" : "https://cdn.loveandlemons.com/wp-content/uploads/2019/12/mimosa-recipe.jpg",
-        "ingredients" : [
-            "1 750 ml bottle of Champagne, prosecco, or cava, chilled",
-            "3 c orange juice"
-        ],
-        "directions" : [
-            "1. Pour the sparkling wine into the Champagne flutes, filling each glass about half full. Pour the orange juice on top to fill each glass and serve."
-        ],
-        "source" : "https://www.loveandlemons.com/mimosa-recipe/#wprm-recipe-container-42453"
+      "id": 5,
+      "name": "Mimosa",
+      "image": "https://cdn.loveandlemons.com/wp-content/uploads/2019/12/mimosa-recipe.jpg",
+      "ingredients": [
+        "1 750 ml bottle of Champagne, prosecco, or cava, chilled",
+        "3 c orange juice"
+      ],
+      "directions": [
+        "1. Pour the sparkling wine into the Champagne flutes, filling each glass about half full. Pour the orange juice on top to fill each glass and serve."
+      ],
+      "source": "https://www.loveandlemons.com/mimosa-recipe/#wprm-recipe-container-42453",
+      "likes": 0,
+      "comments": [
+        "Test 1",
+        "Test 2"
+      ]
     }
-]
+  ]
 }
