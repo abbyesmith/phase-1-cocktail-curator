@@ -119,16 +119,25 @@ commentForm.addEventListener('submit', (event)=> handleSubmitNewComment(event))
 
 document.querySelector("#new-recipe-button").addEventListener('click',()=>
 {
-    console.log(addRecipe);
     addRecipe=!addRecipe;
     if (addRecipe)
     {
         document.querySelector('#container').style.display='block';
-        document.querySelector('#container').addEventListener('submit',(e)=>
+        document.querySelector('#recipe-form').addEventListener('submit',(e)=>
         {
             e.preventDefault();
-            console.log(e.target);
-            //addNewRecipe(e.target);
+            let newRecipe=
+            {
+                name:e.target[0].value,
+                image: e.target[3].value, 
+                // if there is time, add default image
+                ingredients: e.target[1].value.split(`\\`),
+                directions: e.target[2].value.split(`\\`),
+                source: e.target[4].value,
+                likes: 0,
+                comments: []
+            }
+            addNewRecipe(newRecipe);
         })
     }
     else 
@@ -137,20 +146,24 @@ document.querySelector("#new-recipe-button").addEventListener('click',()=>
     }
 })
 
-// function addNewRecipe()
-// {
-//     let name=prompt(`What's the name of your recipe?`);
-//     let num=prompt('How many ingredients do you have?');
-//     let ingArray=[];
-
-//     for (let i=0; i<num; i++)
-//     {
-//         ingArray.push(prompt(`Name ingredient number ${i+1}.`))
-//     }
-//     console.log(ingArray)
-// }
-
-
+function addNewRecipe(recipe)
+{
+    console.log(recipe);
+    fetch('http://localhost:3000/menu', 
+    {
+        method: 'POST',
+        headers:
+        {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(recipe)
+    })
+    .then(res=>res.json())
+    .then(newCard=>
+        {
+            displayNameInNav(newCard);
+        })
+}
 
 
 
