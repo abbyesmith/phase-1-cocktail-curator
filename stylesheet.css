@@ -1,24 +1,27 @@
 body {
 background-color:  #296d98;
- 
+Background-image: url("https://c4.wallpaperflare.com/wallpaper/1016/139/624/narrow-rail-glossy-floor-dark-wood-wallpaper-preview.jpg");
 }
+
 .header 
 {
+    
     background-color: #296d98;
     text-align: center;
     height: 100px;
     align-items: center;
     font-size: 39px;
-    font-family: rockwell;
+    font-family: opperplate, Papyrus, fantasyl;
+    
 }
 
 
 
 * .recipe-list
 {
-    background-color: #e89c4a;
+    background-color: #D2B48C;
     width: 25%;
-    font-family: rockwell;
+    font-family: opperplate, Papyrus, fantasyll;
     border-style: solid;
     padding: 10px;
     
@@ -28,9 +31,10 @@ background-color:  #296d98;
 {
     background-color: #e89c4a;
     flex-grow: 5;
-    font-family: rockwell;
-    border-style: solid;
+    font-family: opperplate, Papyrus, fantasyl;
+    border-style: groove;
     padding: 10px;
+    
 }
 
 .flex-container
@@ -64,4 +68,39 @@ background-color:  #296d98;
     height: 150px;
 }
 
-    
+{
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .colorshadow {
+    border: 2px solid #00A4BD;
+    padding: 10px;
+    box-shadow: 6px 4px #9ecdd5;
+  }
