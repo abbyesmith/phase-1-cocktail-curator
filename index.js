@@ -8,99 +8,107 @@ fetch ("http://localhost:3000/menu")
     recipeData=json;
     recipeData.forEach(recipe=>{
         displayNameInNav(recipe);
-        //showRecipeCard(recipe);
     })
     showRecipeCard(recipeData[0]);
-   //displayComments(recipe);
 
  })
 
  function displayNameInNav(recipe){
-    //console.log("HI");
     let recipeList = document.querySelector('.recipe-list');
     let recipeTitle = document.createElement("li");
     recipeTitle.textContent=recipe.name;
     recipeList.appendChild(recipeTitle);
     recipeTitle.addEventListener("click", () => {
         document.querySelector('#comment-list').textContent='';
+        document.querySelector('#recipe-ingredients').textContent='';
+        document.querySelector('#recipe-instructions').textContent='';
         showRecipeCard(recipe);
     })
+    recipeTitle.addEventListener("mouseover",(e) => {
+        e.target.style.color = "red";
+    })
+    recipeTitle.addEventListener("mouseout",(e) => {
+        e.target.style.color = "black";
+    })
  }
-// function clearPage(){
-//     let content = document.querySelector("#comment-list");
-//     content.innerHTML = "";
-//       }
+
 function showRecipeCard(recipe){
 
     currentRecipe=recipe;
-    //recipe.forEach(comment=>
     let recipeName = document.querySelector("#title");
     let recipeImage = document.querySelector("#recipe-image");
     let recipeIngredients = document.querySelector("#recipe-ingredients");
     let recipeInstructions = document.querySelector("#recipe-instructions");
     let recipeSource = document.querySelector("#recipe-source");
+    let recipeLikes = document.querySelector("#likes-section")
     let recipeComments = document.querySelector("#comment-print");
     let commentlist = document.querySelector("#comment-list");
-    //querySelector("#comment-list").remove();
 
     recipeName.textContent=recipe.name;
     recipeImage.src=recipe.image;
-    recipeIngredients.textContent=recipe.ingredients;
-    recipeInstructions.textContent=recipe.directions;
+    recipe.ingredients.forEach(thing=>{
+        console.log(thing);
+        let t = document.createElement("li");
+        t.textContent=thing;
+        recipeIngredients.append(t)
+    })
+    recipe.directions.forEach(step=>{
+        let s = document.createElement("p");
+        s.textContent=step;
+        recipeInstructions.append(s)
+    })
     recipeSource.href=recipe.source;
-    //console.log(recipe.comments);
     recipe.comments.forEach(comment=>{
         let c = document.createElement("li");
         c.textContent=comment;
-        //Adding multiple rows
         commentlist.append(c)
     });
-    
-    //displayComments(recipe.comments);
-
+    recipeLikes.textContent=`${recipe.likes} likes`;
 }
-//1. def var 
+document.querySelector("#likes-button").addEventListener("click", () => addLike(currentRecipe));
 
-//const test = document.querySelector("#title");
-//console.log(test);
-
-//function to display comments 
-//let commentSection = document.querySelector("#recipe-image");
-//console.log(commentSection);
-
-// function displayComments(comments){
-//     //console.log(comments),
-//     comments.forEach(comment => addComment(comment))
-//     //addComment(comments);
-
-// }
-
-
-function addComment(comment){
-    let commentSection = document.querySelector("#comment-list");
-    //commentSection.innerHTML = "";
-  
-    //console.log(commentSection);
-   let note = document.createElement("li");
-    note.textContent = comment;
-    // console.log(commentSection);
-    commentSection.append(note);
-    
+function addLike(currentRecipe){
+    currentRecipe.likes+=1;
+    return fetch(`http://localhost:3000/menu/${currentRecipe.id}`,{
+    method: 'PATCH',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accepts': 'application/json'
+    },
+    body: JSON.stringify(currentRecipe)
+    })
+    .then(response => response.json())
+    .then(updated=>{ 
+        document.querySelector("#likes-section").textContent=`${updated.likes} likes`;
+})
+}
+function addComment(currentRecipe){
+    return fetch(`http://localhost:3000/menu/${currentRecipe.id}`,{
+    method: 'PATCH',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accepts': 'application/json'
+    },
+    body: JSON.stringify(currentRecipe)
+    })
+    .then(response => response.json())
+    .then(updated=>{ 
+        let commentSection = document.querySelector("#comment-list");
+        let note = document.createElement("li");
+        note.textContent = updated.comments.slice(-1);
+        commentSection.append(note);
+    })
 }
 
 function handleSubmitNewComment(event) {
     event.preventDefault();
     const newComment = event.target[0].value;
-    addComment(newComment);
-    // event.target.reset()
+    currentRecipe.comments.push(newComment);
+    addComment(currentRecipe);
+    event.target.reset()
 }
 let commentForm = document.querySelector("#comment-form");
 commentForm.addEventListener('submit', (event)=> handleSubmitNewComment(event))
 
-function newComment(){
-    let commentForm = document.querySelector("#comment-form");
-    commentForm.addEventListener('submit', (event) => {
-        event.preventDefault()
-        currentRecipe.comments.push(event.target.value)
-    })
-}
+
+

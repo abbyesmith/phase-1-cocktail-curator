@@ -17,15 +17,19 @@
             <ul>
             </ul>
         </div>
-        <div class= "recipe-list">
+        <div class= "recipe-detail">
             <!-- EVERYTHING INSIDE THIS DIV WILL BE GENERATED WHEN GET REQUEST IS DONE -->
             <h4 id = "title">TITLE</h4>
-            <ul>
-                <li id="recipe-ingredients">Placeholder for ingredients</li>
+            <ul id = "recipe-ingredients">
+                <!-- <li id="recipe-ingredients">Placeholder for ingredients</li> -->
             </ul>
             <img id="recipe-image" src="" />
-            <li id="recipe-instructions">Placeholder for directions</li>
-            <a id="recipe-source" href="">LINK</a>
+            <div>
+                <span id = "likes-section"></span>
+                <button id = "likes-button">🥂</button>
+            </div>
+            <ul id="recipe-instructions"></ul>
+            <a id="recipe-source" href="">  </a>
             <div class="comments-container">
                 <div class="comments-section">
                     <ul id="comment-list"></ul>
@@ -36,10 +40,7 @@
                 </form>
             </div>
             <!-- EVERYTHING INSIDE THIS DIV WILL BE GENERATED WHEN GET REQUEST IS DONE -->
-            <div class="recipe-list">
-                <ul>
-                </ul>
-            </div>
+
         </div>
     </div>
 </body>
