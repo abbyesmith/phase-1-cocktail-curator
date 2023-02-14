@@ -26,6 +26,7 @@ background-color:  #296d98;
 
 .recipe-detail
 {
+    flex-grow: 5;
     background-color: #e89c4a;
     font-family: rockwell;
     border-style: solid;
@@ -61,5 +62,6 @@ background-color:  #296d98;
     width: 150px;
     height: 150px;
 }
+
 
     
