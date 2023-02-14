@@ -3,7 +3,7 @@ let recipeData;
 let currentRecipe;
 let addRecipe=false;
 
-//fetch
+// initial fetch
 fetch ("http://localhost:3000/menu")
  .then(response => response.json())
  .then(json=>{
@@ -15,24 +15,45 @@ fetch ("http://localhost:3000/menu")
 
  })
 
+ //generate left side info, creates list items for recipes
+
  function displayNameInNav(recipe){
+
+    let deleteBtn=document.createElement('button');
+    deleteBtn.textContent='x';
+    deleteBtn.classList.add('deleteBtn');
     let recipeList = document.querySelector('.recipe-list');
     let recipeTitle = document.createElement("li");
-    recipeTitle.textContent=recipe.name;
-    recipeList.appendChild(recipeTitle);
-    recipeTitle.addEventListener("click", () => {
+    let span=document.createElement('span')
+    span.textContent=recipe.name;
+    recipeTitle.append(span);
+    recipeList.append(recipeTitle);
+    if(recipe.id>5)
+    {  
+        recipeTitle.append(deleteBtn);
+    }
+  
+    span.addEventListener("click", () => {
         document.querySelector('#comment-list').textContent='';
         document.querySelector('#recipe-ingredients').textContent='';
         document.querySelector('#recipe-instructions').textContent='';
         showRecipeCard(recipe);
     })
-    recipeTitle.addEventListener("mouseover",(e) => {
-        e.target.style.color = "red";
+    span.addEventListener("mouseover",(e) => {
+        e.target.style.color = "white";
     })
-    recipeTitle.addEventListener("mouseout",(e) => {
+    span.addEventListener("mouseout",(e) => {
         e.target.style.color = "black";
     })
+
+    deleteBtn.addEventListener('click', ()=>
+    {
+        recipeTitle.remove();
+        deleteRecipe(recipe);
+    })
  }
+
+ //shows info for recipes on right side (on click)
 
 function showRecipeCard(recipe){
 
@@ -66,7 +87,12 @@ function showRecipeCard(recipe){
     });
     recipeLikes.textContent=`${recipe.likes} likes`;
 }
+
+//adds event listener to like button
+
 document.querySelector("#likes-button").addEventListener("click", () => addLike(currentRecipe));
+
+//patches number of likes on 'click' like button 
 
 function addLike(currentRecipe){
     currentRecipe.likes+=1;
@@ -83,6 +109,9 @@ function addLike(currentRecipe){
         document.querySelector("#likes-section").textContent=`${updated.likes} likes`;
 })
 }
+
+//patches comments on 'submit' button comment section
+
 function addComment(currentRecipe){
     return fetch(`http://localhost:3000/menu/${currentRecipe.id}`,{
     method: 'PATCH',
@@ -101,13 +130,21 @@ function addComment(currentRecipe){
     })
 }
 
+//handles submit, updates commet array and invokes addComment() for the patch
+
 function handleSubmitNewComment(event) {
     event.preventDefault();
     const newComment = event.target[0].value;
-    currentRecipe.comments.push(newComment);
-    addComment(currentRecipe);
+    if (event.target[0].value)
+    {
+        currentRecipe.comments.push(newComment);
+        addComment(currentRecipe);
+    }
     event.target.reset()
 }
+
+// adds event listener to comment submit buttons 
+
 let commentForm = document.querySelector("#comment-form");
 commentForm.addEventListener('submit', (event)=> handleSubmitNewComment(event))
 
@@ -119,38 +156,71 @@ commentForm.addEventListener('submit', (event)=> handleSubmitNewComment(event))
 
 document.querySelector("#new-recipe-button").addEventListener('click',()=>
 {
-    console.log(addRecipe);
     addRecipe=!addRecipe;
     if (addRecipe)
     {
         document.querySelector('#container').style.display='block';
-        document.querySelector('#container').addEventListener('submit',(e)=>
+        document.querySelector('#new-recipe-button').textContent='HIDE NEW RECIPE FORM';
+        document.querySelector('#recipe-form').addEventListener('submit',(e)=>
         {
             e.preventDefault();
-            console.log(e.target);
-            //addNewRecipe(e.target);
+            let newRecipe=
+            {
+                name:e.target[0].value,
+                image: e.target[3].value, 
+                // if there is time, add default image
+                ingredients: e.target[1].value.split(`\\`),
+                directions: e.target[2].value.split(`\\`),
+                source: e.target[4].value,
+                likes: 0,
+                comments: []
+            }
+            addNewRecipe(newRecipe);
         })
     }
     else 
     {
         document.querySelector('#container').style.display='none';
+        document.querySelector('#new-recipe-button').textContent='ADD NEW RECIPE';
     }
 })
 
-// function addNewRecipe()
-// {
-//     let name=prompt(`What's the name of your recipe?`);
-//     let num=prompt('How many ingredients do you have?');
-//     let ingArray=[];
+//posts new recipe on 'submit' 
 
-//     for (let i=0; i<num; i++)
-//     {
-//         ingArray.push(prompt(`Name ingredient number ${i+1}.`))
-//     }
-//     console.log(ingArray)
-// }
+function addNewRecipe(recipe)
+{
+    console.log(recipe);
+    fetch('http://localhost:3000/menu', 
+    {
+        method: 'POST',
+        headers:
+        {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(recipe)
+    })
+    .then(res=>res.json())
+    .then(newCard=>
+        {
+            displayNameInNav(newCard);
+        })
+}
 
+//Function to delete receipe when 'x' button is clicked
 
+function deleteRecipe(recipe){
+    return fetch(`http://localhost:3000/menu/${recipe.id}`,
+    {
+        method: 'DELETE',
+        headers:
+        {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(recipe)
+    })
+    .then(res=>res.json())
+    .then(data=>console.log(data))
+}
 
 
 

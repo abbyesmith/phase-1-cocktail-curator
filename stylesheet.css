@@ -1,6 +1,6 @@
 body {
-background-color:  #296d98;
-Background-image: url("https://c4.wallpaperflare.com/wallpaper/1016/139/624/narrow-rail-glossy-floor-dark-wood-wallpaper-preview.jpg");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKEXs2tgFrcU394k-ZPoYwO5H7jU4OU-gbdcJIoWkem9kZbDpoBOTSb75OTK51gXjayk&usqp=CAU");
+ 
 }
 
 .header 
@@ -17,29 +17,29 @@ Background-image: url("https://c4.wallpaperflare.com/wallpaper/1016/139/624/narr
 
 
 
-* .recipe-list
+.recipe-list
 {
-    background-color: #D2B48C;
+    background-color: #e29747;
     width: 25%;
-    font-family: opperplate, Papyrus, fantasyll;
-    border-style: solid;
+    font-family: rockwell;
+    border-width: 10px;
+    border-style: groove;
     padding: 10px;
     
 } 
 
 .recipe-detail
 {
-    background-color: #e89c4a;
     flex-grow: 5;
-    font-family: opperplate, Papyrus, fantasyl;
+    background-color:  #d67b1a;
     border-style: groove;
+    border-width: 10px;
     padding: 10px;
     
 }
 
 .flex-container
 {
-    padding: 10px;
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -51,56 +51,69 @@ Background-image: url("https://c4.wallpaperflare.com/wallpaper/1016/139/624/narr
     flex-direction: column;
     flex-wrap: wrap;
     width: 50%;
-    background-color: #e89c4a
-   
+    background-color: rgb(200, 192, 147);
+    border-color: black;
+
+
+    border: 2px solid #b3671c;
+    padding: 10px;
+    box-shadow: 6px 4px #643105;
 }
 
 .comments-section
 {
-    background-color: white;
-    border-color: black;
-    background-color: #e89c4a
-    
+    padding:5px;
+    background-color: rgb(200, 192, 147);    
 }
 
 #recipe-image {
-    width: 150px;
     height: 150px;
 }
 
-{
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-  }
-  
+#container{
+    width:50%;
+}
 
-  
-  /* Style the top navigation bar */
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  /* Style the topnav links */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  .colorshadow {
-    border: 2px solid #00A4BD;
-    padding: 10px;
-    box-shadow: 6px 4px #9ecdd5;
-  }
+form#recipe-form > input
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+label{
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+}
+
+.submit-button
+{
+    background:#AA4A44;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+    margin-block:0px;
+}
+
+*{
+    font-family: rockwell;
+}
+
+.btn{
+    background-color: rgb(200, 192, 147);
+    border-radius: 20px;
+}
+    
+.deleteBtn
+{
+    font-size:1px;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,39 +8,45 @@
     <link rel="stylesheet" href="stylesheet.css">
     <title>Document</title>
 </head>
+
 <body>
     <script defer src="index.js"></script>
     <div class="top-bar">
         <h2>Cocktail Curator</h2>
+        <div><button class='btn' id="new-recipe-button">ADD NEW RECIPE</button></div>
         <div id="container" style="display: none">
-            <input type="text" placeholder="name">
-            <input type="text" placeholder="ingredients">
-            <input type="directions" placeholder="directions">
-            <input type="submit">
+            <form id="recipe-form">
+                <input type="text" placeholder="name">
+                <label>Please separate ingredients using a backslash ("\")</label>
+                <input type="text" placeholder="ingredients">
+                <label>Please separate directions using a backslash ("\")</label>
+                <input type="directions" placeholder="directions">
+                <input type="text" placeholder="add URL for image here">
+                <input type="text" placeholder="add URL for source here">
+                <input class="submit-button" type="submit">
+            </form>
         </div>
     </div>
     <div class="flex-container">
         <div class="recipe-list">
             <ul>
             </ul>
-    
-            <button class="colorshadow"id="new-recipe-button">ADD NEW RECIPE</button>
         </div>
-        <div class= "recipe-detail">
+        <div class="recipe-detail">
             <!-- EVERYTHING INSIDE THIS DIV WILL BE GENERATED WHEN GET REQUEST IS DONE -->
-            <h4 id = "title">TITLE</h4>
-            <ul id = "recipe-ingredients">
-                <!-- <li id="recipe-ingredients">Placeholder for ingredients</li> -->
+            <h4 id="title">TITLE</h4>
+            <ul id="recipe-ingredients">
             </ul>
             <img id="recipe-image" src="" />
             <div>
-                <span id = "likes-section"></span>
-                <button id = "likes-button">🥂</button>
+                <span id="likes-section"></span>
+                <button class='btn' id="likes-button">🥂</button>
             </div>
             <ul id="recipe-instructions"></ul>
-            <a id="recipe-source" href="">  </a>
+            <a id="recipe-source" href=""> </a>
             <div class="comments-container">
                 <div class="comments-section">
+                    <h4>Comments</h4>
                     <ul id="comment-list"></ul>
                 </div>
                 <form id="comment-form">
