@@ -63,5 +63,24 @@ background-color:  #296d98;
     height: 150px;
 }
 
+#container{
+    width:50%;
+}
+
+form#recipe-form > input
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+label{
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+}
+
 
     
