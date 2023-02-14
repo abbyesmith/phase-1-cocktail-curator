@@ -1,33 +1,3 @@
-// fetch("http://localhost:3000/menu")
-//  .then(response => response.json())
-//  .then(menuData=>{
-//     displayTitles(menuData);
-//  })
-
-//  function displayTitles(menuData){
-//     menuData.forEach(recipe=>{
-//         let li=document.createElement('li');
-//         li.textContent=recipe.name;
-
-// This is my work from 2/13 AM
-
-//Global Variables
-let recipeData;
-let currentRecipe;
-
-//fetch
-fetch('http://localhost:3000/menu')
-//         document.querySelector('#recipes').append(li);
-//         li.addEventListener('click',()=>getCard(recipe))
-//     })
-//  }
-
-// //function to display recipe card
-
-// function getCard(recipe){
-//     document.querySelector('h4').textContent=recipe.name;
-// }
-
 //Global Variables
 let recipeData;
 let currentRecipe;
