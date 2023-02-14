@@ -45,10 +45,7 @@
       ],
       "source": "https://www.liquor.com/recipes/bourbon-old-fashioned/",
       "likes": 0,
-      "comments": [
-        "Test 1",
-        "Test 2"
-      ]
+      "comments": []
     },
     {
       "id": 3,
@@ -68,10 +65,7 @@
       ],
       "source": "https://cookieandkate.com/bees-knees-cocktail-recipe/",
       "likes": 0,
-      "comments": [
-        "Test 1",
-        "Test 2"
-      ]
+      "comments": []
     },
     {
       "id": 4,
@@ -92,10 +86,7 @@
       ],
       "source": "https://www.loveandlemons.com/mojito-recipe/",
       "likes": 0,
-      "comments": [
-        "Test 1",
-        "Test 2"
-      ]
+      "comments": []
     },
     {
       "id": 5,
@@ -109,11 +100,8 @@
         "1. Pour the sparkling wine into the Champagne flutes, filling each glass about half full. Pour the orange juice on top to fill each glass and serve."
       ],
       "source": "https://www.loveandlemons.com/mimosa-recipe/#wprm-recipe-container-42453",
-      "likes": 1,
-      "comments": [
-        "Test 1",
-        "Test 2"
-      ]
+      "likes": 2,
+      "comments": []
     }
   ]
 }

@@ -27,7 +27,6 @@ background-color:  #296d98;
 .recipe-detail
 {
     background-color: #e89c4a;
-    flex-grow: 5;
     font-family: rockwell;
     border-style: solid;
     padding: 10px;
@@ -35,7 +34,6 @@ background-color:  #296d98;
 
 .flex-container
 {
-    padding: 10px;
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -47,15 +45,15 @@ background-color:  #296d98;
     flex-direction: column;
     flex-wrap: wrap;
     width: 50%;
-    background-color: #e89c4a
+    background-color: white;
    
 }
 
 .comments-section
 {
+    padding:5px;
     background-color: white;
     border-color: black;
-    background-color: #e89c4a
     
 }
 
