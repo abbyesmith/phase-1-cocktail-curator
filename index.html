@@ -11,6 +11,7 @@
     <script defer src="index.js"></script>
     <div class="top-bar">
         <h2>Cocktail Curator</h2>
+        <div><button id="new-recipe-button">ADD NEW RECIPE</button></div>
         <div id="container" style="display: none">
             <form id="recipe-form">
                 <input type="text" placeholder="name">
@@ -20,7 +21,7 @@
                 <input type="directions" placeholder="directions">
                 <input type="text" placeholder="add URL for image here">
                 <input type="text" placeholder="add URL for source here">
-                <input type="submit">
+                <input class="submit-button" type="submit">
             </form>
         </div>
     </div>
@@ -28,13 +29,11 @@
         <div class="recipe-list">
             <ul>
             </ul>
-            <button id="new-recipe-button">ADD NEW RECIPE</button>
         </div>
         <div class= "recipe-detail">
             <!-- EVERYTHING INSIDE THIS DIV WILL BE GENERATED WHEN GET REQUEST IS DONE -->
             <h4 id = "title">TITLE</h4>
             <ul id = "recipe-ingredients">
-                <!-- <li id="recipe-ingredients">Placeholder for ingredients</li> -->
             </ul>
             <img id="recipe-image" src="" />
             <div>

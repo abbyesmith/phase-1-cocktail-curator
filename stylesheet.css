@@ -1,7 +1,8 @@
 body {
-background-color:  #296d98;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKEXs2tgFrcU394k-ZPoYwO5H7jU4OU-gbdcJIoWkem9kZbDpoBOTSb75OTK51gXjayk&usqp=CAU");
  
 }
+
 .header 
 {
     background-color: #296d98;
@@ -14,12 +15,13 @@ background-color:  #296d98;
 
 
 
-* .recipe-list
+.recipe-list
 {
-    background-color: #e89c4a;
+    background-color: #e29747;
     width: 25%;
     font-family: rockwell;
-    border-style: solid;
+    border-width: 10px;
+    border-style: groove;
     padding: 10px;
     
 } 
@@ -27,9 +29,9 @@ background-color:  #296d98;
 .recipe-detail
 {
     flex-grow: 5;
-    background-color: #e89c4a;
-    font-family: rockwell;
-    border-style: solid;
+    background-color:  #d67b1a;
+    border-style: groove;
+    border-width: 10px;
     padding: 10px;
 }
 
@@ -46,20 +48,18 @@ background-color:  #296d98;
     flex-direction: column;
     flex-wrap: wrap;
     width: 50%;
-    background-color: white;
-   
+    background-color: rgb(200, 192, 147);
+    border: solid;
+    border-color: black;
 }
 
 .comments-section
 {
     padding:5px;
-    background-color: white;
-    border-color: black;
-    
+    background-color: rgb(200, 192, 147);    
 }
 
 #recipe-image {
-    width: 150px;
     height: 150px;
 }
 
@@ -82,5 +82,27 @@ label{
     background-color: black;
 }
 
+.submit-button
+{
+    background:#AA4A44;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
 
+h2{
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+    margin-block:0px;
+}
+
+*{
+    font-family: rockwell;
+}
+
+button{
+    background-color: rgb(200, 192, 147);
+    border-radius: 20px;
+}
     

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Margarita",
-      "image": "https://www.gimmesomeoven.com/wp-content/uploads/2015/05/Classic-Margarita-Recipe-5.jpg",
+      "image": "https://thumbs.dreamstime.com/b/margarita-174685.jpg",
       "ingredients": [
         "1.5 oz silver tequila",
         "1 oz orange liqueur",
@@ -44,13 +44,15 @@
         "4. Express the oil of an orange twist over the glass, then drop into the glass to garnish."
       ],
       "source": "https://www.liquor.com/recipes/bourbon-old-fashioned/",
-      "likes": 0,
-      "comments": []
+      "likes": 1,
+      "comments": [
+        "I drink these at 2pm"
+      ]
     },
     {
       "id": 3,
       "name": "Bee's Knees",
-      "image": "https://cookieandkate.com/images/2020/04/bees-knees-cocktail.jpg",
+      "image": "https://vinepair.com/wp-content/uploads/2021/12/beesknees_card.jpg",
       "ingredients": [
         "0.5 oz honey syrup",
         "1 oz lemon juice",
@@ -65,12 +67,14 @@
       ],
       "source": "https://cookieandkate.com/bees-knees-cocktail-recipe/",
       "likes": 0,
-      "comments": []
+      "comments": [
+        "It's the bees knees!"
+      ]
     },
     {
       "id": 4,
       "name": "Mojito",
-      "image": "https://cdn.loveandlemons.com/wp-content/uploads/2020/07/mojito-recipe.jpg",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIr47Hneg4FiA83ezgfDm8S9vtHisTpR3neg&usqp=CAU",
       "ingredients": [
         "5 mint leaves, more for garnish",
         "2 oz white rum",
@@ -91,7 +95,7 @@
     {
       "id": 5,
       "name": "Mimosa",
-      "image": "https://cdn.loveandlemons.com/wp-content/uploads/2019/12/mimosa-recipe.jpg",
+      "image": "https://media.istockphoto.com/id/1073914950/photo/three-refreshing-mimosa-cocktails.jpg?s=612x612&w=0&k=20&c=Jt0BWnGxlEQUZFA82hecUv_Eku5SVHaGL3BgzEoYJrI=",
       "ingredients": [
         "1 750 ml bottle of Champagne, prosecco, or cava, chilled",
         "3 c orange juice"
@@ -100,8 +104,40 @@
         "1. Pour the sparkling wine into the Champagne flutes, filling each glass about half full. Pour the orange juice on top to fill each glass and serve."
       ],
       "source": "https://www.loveandlemons.com/mimosa-recipe/#wprm-recipe-container-42453",
-      "likes": 2,
+      "likes": 3,
       "comments": []
+    },
+    {
+      "name": "example",
+      "image": "example",
+      "ingredients": [
+        "example",
+        "example"
+      ],
+      "directions": [
+        "example",
+        "example"
+      ],
+      "source": "example",
+      "likes": 0,
+      "comments": [],
+      "id": 6
+    },
+    {
+      "name": "example2",
+      "image": "example2",
+      "ingredients": [
+        "example2",
+        "example2"
+      ],
+      "directions": [
+        "example2",
+        "example2"
+      ],
+      "source": "example2",
+      "likes": 0,
+      "comments": [],
+      "id": 7
     }
   ]
 }
