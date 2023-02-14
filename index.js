@@ -20,7 +20,8 @@ fetch ("http://localhost:3000/menu")
  function displayNameInNav(recipe){
 
     let deleteBtn=document.createElement('button');
-    deleteBtn.textContent='X';
+    deleteBtn.textContent='x';
+    deleteBtn.classList.add('deleteBtn');
     let recipeList = document.querySelector('.recipe-list');
     let recipeTitle = document.createElement("li");
     let span=document.createElement('span')
@@ -45,7 +46,11 @@ fetch ("http://localhost:3000/menu")
         e.target.style.color = "black";
     })
 
-    deleteBtn.addEventListener('click', ()=>recipeTitle.remove())
+    deleteBtn.addEventListener('click', ()=>
+    {
+        recipeTitle.remove();
+        deleteRecipe(recipe);
+    })
  }
 
  //shows info for recipes on right side (on click)
@@ -130,8 +135,11 @@ function addComment(currentRecipe){
 function handleSubmitNewComment(event) {
     event.preventDefault();
     const newComment = event.target[0].value;
-    currentRecipe.comments.push(newComment);
-    addComment(currentRecipe);
+    if (event.target[0].value)
+    {
+        currentRecipe.comments.push(newComment);
+        addComment(currentRecipe);
+    }
     event.target.reset()
 }
 
@@ -152,6 +160,7 @@ document.querySelector("#new-recipe-button").addEventListener('click',()=>
     if (addRecipe)
     {
         document.querySelector('#container').style.display='block';
+        document.querySelector('#new-recipe-button').textContent='HIDE NEW RECIPE FORM';
         document.querySelector('#recipe-form').addEventListener('submit',(e)=>
         {
             e.preventDefault();
@@ -172,6 +181,7 @@ document.querySelector("#new-recipe-button").addEventListener('click',()=>
     else 
     {
         document.querySelector('#container').style.display='none';
+        document.querySelector('#new-recipe-button').textContent='ADD NEW RECIPE';
     }
 })
 
@@ -194,6 +204,22 @@ function addNewRecipe(recipe)
         {
             displayNameInNav(newCard);
         })
+}
+
+//Function to delete receipe when 'x' button is clicked
+
+function deleteRecipe(recipe){
+    return fetch(`http://localhost:3000/menu/${recipe.id}`,
+    {
+        method: 'DELETE',
+        headers:
+        {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(recipe)
+    })
+    .then(res=>res.json())
+    .then(data=>console.log(data))
 }
 
 

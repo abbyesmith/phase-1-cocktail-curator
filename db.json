@@ -106,38 +106,6 @@
       "source": "https://www.loveandlemons.com/mimosa-recipe/#wprm-recipe-container-42453",
       "likes": 3,
       "comments": []
-    },
-    {
-      "name": "example",
-      "image": "example",
-      "ingredients": [
-        "example",
-        "example"
-      ],
-      "directions": [
-        "example",
-        "example"
-      ],
-      "source": "example",
-      "likes": 0,
-      "comments": [],
-      "id": 6
-    },
-    {
-      "name": "example2",
-      "image": "example2",
-      "ingredients": [
-        "example2",
-        "example2"
-      ],
-      "directions": [
-        "example2",
-        "example2"
-      ],
-      "source": "example2",
-      "likes": 0,
-      "comments": [],
-      "id": 7
     }
   ]
 }

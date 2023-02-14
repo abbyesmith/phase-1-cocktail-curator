@@ -49,8 +49,12 @@ body {
     flex-wrap: wrap;
     width: 50%;
     background-color: rgb(200, 192, 147);
-    border: solid;
     border-color: black;
+
+
+    border: 2px solid #b3671c;
+    padding: 10px;
+    box-shadow: 6px 4px #643105;
 }
 
 .comments-section
@@ -101,8 +105,12 @@ h2{
     font-family: rockwell;
 }
 
-button{
+.btn{
     background-color: rgb(200, 192, 147);
     border-radius: 20px;
 }
     
+.deleteBtn
+{
+    font-size:1px;
+}
