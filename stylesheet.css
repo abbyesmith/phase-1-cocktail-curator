@@ -19,6 +19,8 @@ body {
 {
     background-color: #e29747;
     width: 25%;
+    min-width: 25%;
+    max-width: 25%;
     font-family: rockwell;
     border-width: 10px;
     border-style: groove;
