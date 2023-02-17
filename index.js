@@ -176,6 +176,7 @@ document.querySelector("#new-recipe-button").addEventListener('click',()=>
                 comments: []
             }
             addNewRecipe(newRecipe);
+            e.target.reset();
         })
     }
     else 
